@@ -10,8 +10,8 @@ d3.tsv("data/age.tsv").then(function(data){
     });
 
     var svg = d3.select("#chart-area").append("svg")
-        .attr("width", 400)
-        .attr("height", 400);
+    .attr("width", 400)
+    .attr("height", 400);
 
     var circles = svg.selectAll("circle")
         .data(data);
@@ -22,18 +22,18 @@ d3.tsv("data/age.tsv").then(function(data){
                 console.log(d);
                 return (i * 50) + 25;
             })
-            .attr("cy", 25)
+            .attr("cy", 200)
             .attr("r", function(d){
                 return d.age * 2;
             })
             .attr("fill", function(d){
-                if (d.name == "Tony") {
+                if(d.name === "Tony"){
                     return "blue";
-                }
-                else {
+                } else {
                     return "red";
                 }
             });
 }).catch(function(error){
     console.log(error);
 })
+

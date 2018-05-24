@@ -18,7 +18,7 @@ circles.enter()
         .attr("cx", function(d, i){
             return (i * 50) + 25;
         })
-        .attr("cy", 25)
+        .attr("cy", 200)
         .attr("r", function(d){
             return d;
         })
